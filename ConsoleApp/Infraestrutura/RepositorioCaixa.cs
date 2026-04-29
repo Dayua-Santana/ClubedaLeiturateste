@@ -1,0 +1,5 @@
+using ClubedaLeiturateste.ConsoleApp.Infraestrutura.base;
+
+namespace ClubedaLeiturateste.ConsoleApp.Infraestrutura
+
+public class RepositorioCaixa : RepositorioBase;
