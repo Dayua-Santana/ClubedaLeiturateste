@@ -54,17 +54,24 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 /warnaserror+:NU1605,SYSLIB0011
 
 [sourceFiles]
-Apresentacao/TelaAmigo.cs
+Apresentacao/
+ TelaAmigo.cs
+ TelaEmprestimo.cs
+ TelaRevista.cs
 Dominio/
  Amigo.cs
  Caixa.cs
  Emprestimo.cs
  EntidadeBase.cs
  Revista.cs
+ StatusEmprestimo.cs
  StatusRevista.cs
 Infraestrutura/
  RepositorioAmigo.cs
  RepositorioBase.cs
+ RepositorioCaixa.cs
+ RepositorioEmprestimo.cs
+ RepositorioRevista.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  ConsoleApp.AssemblyInfo.cs

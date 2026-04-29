@@ -1,6 +1,6 @@
 
 namespace ClubedaLeiturateste.ConsoleApp.Dominio;
-{
+
 using System.Collections.Generic;
 public class Amigo : EntidadeBase
 {
@@ -10,7 +10,7 @@ public class Amigo : EntidadeBase
 
     // Um amigo pode ter vários empréstimos ao longo do tempo
 
-    public Emprestimo?[] Emprestimos { get; set} = new Emprestimo?[100];
+    public Emprestimo?[] Emprestimos { get; set; } = new Emprestimo?[100];
 
     public Amigo(string nome, string nomeResponsavel, string telefone)
     {
@@ -22,9 +22,9 @@ public class Amigo : EntidadeBase
     //Adiciona um empréstimo no array do amigo 
     public void AdicionarEmprestimo(Emprestimo emprestimo)
     {
-        for (int i = 0; int < Emprestimos.Length; int++)
+        for (int i = 0; i < Emprestimos.Length; i++)
         {
-            if (emprestimo[i] == null)
+            if (Emprestimos[i] == null)
             {
                 Emprestimos[i] = emprestimo;
                 break;
@@ -44,6 +44,11 @@ public class Amigo : EntidadeBase
 
         return erros.ToArray();
     }
+
+    public void CadastrarEmprestimo(Emprestimo novoEmprestimo)
+    {
+        repositorioEmprestimo
+    }
     public override void AtualizarRegistro(EntidadeBase novoRegistro)
     {
         Amigo atualizado = (Amigo)novoRegistro;
@@ -51,5 +56,4 @@ public class Amigo : EntidadeBase
         this.NomeResponsavel = atualizado.NomeResponsavel;
         this.Telefone = atualizado.Telefone;
     }
-}
 }
