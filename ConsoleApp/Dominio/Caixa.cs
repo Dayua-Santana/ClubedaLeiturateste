@@ -38,8 +38,9 @@ public class Caixa : EntidadeBase
     // Atualiza os dados sem trocar o ID
     public override void AtualizarRegistro(EntidadeBase entidadeAtualizada)
     {
-        Caixa nova = (Caixa)entidadeAtualizada; ; //Conerte o tipo
-        Etiqueta = nova.Etiqueta
-        Cor = nova.Cor
+        Caixa nova = (Caixa)entidadeAtualizada;  //Conerte o tipo
+        this.Etiqueta = nova.Etiqueta;
+        this.Cor = nova.Cor;
+        this.DiasDeEmprestimo = nova.DiasDeEmprestimo;
     }
 }

@@ -1,17 +1,21 @@
 using ClubedaLeiturateste.ConsoleApp.Dominio;
+using System;
 
-public class Emprestimo
+
+namespace ClubedaLeiturateste.ConsoleApp.Dominio;
+
+public class Emprestimo : EntidadeBase
 {
-    public string Id { get; set}
-    public Revista Revista { get; set} //qual revista
-    public Amigo Amigo { get; set}      //pra quem
-    public DateTime Abertura { get; set}
-    public StatusEmprestimo Status { get; set}
+    public Revista Revista { get; set; }
+    public Amigo Amigo { get; set; }
+    public DateTime DataEmprestimo { get; set; }
+    public DateTime? DataDevolucao { get; set; }
+    public StatusEmprestimo Status { get; set; }
 
-    // Calculado na hora, não precisa ser salvo
-    // Pega a data de abertura e soma os dias da caixa da revista
-    public DateTime ConclusaoPrevista => Abertura.AddDays(Revista.Caixa.DiasDeEmprestimo);
-
-    //Esta atrasado se: esta Aberto E já passou da data prevista
-    public bool EstaAtrasado => StatusEmprestimo.Aberto && DateTime.Now > ConclusaoPrevista;
+    public Emprestimo(Amigo amigo, Revista revista, DateTime dataEmprestimo)
+    {
+        Amigo = amigo;
+        Revista = revista;
+        DataEmprestimo = dataEmprestimo
+    }
 }

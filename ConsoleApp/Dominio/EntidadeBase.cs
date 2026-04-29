@@ -2,7 +2,7 @@ using System.Security.Cryptography;
 using System;
 public abstract class EntidadeBase
 {
-    public string Id { get; set}
+    public string Id { get; set; }
 
     public EntidadeBase()
     {
