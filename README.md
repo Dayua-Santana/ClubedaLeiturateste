@@ -41,3 +41,14 @@ ConsoleApp/
  ┣ 📂 Apresentacao     # Interface de usuário (menus e inputs)
  ┣ 📂 Infraestrutura    # Repositórios para armazenamento em memória
  ┗ 📜 Program.cs       # Ponto de entrada (Bootstrap) da aplicação
+```
+---
+
+## 📖 Como Executar
+1. Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado.
+2. Clone o repositório:
+   ```bash
+   git clone [https://github.com/Dayua-Santana/JogoTermo](https://github.com/Dayua-Santana/JogoTermo)
+3. Execute o código utilizando o comando:
+    ```bash 
+    dotnet run progam.cs
