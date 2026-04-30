@@ -1,0 +1,5 @@
+C:\Users\yuajs\Desktop\ClubedaLeiturateste\ConsoleApp\obj\Debug\net10.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yuajs\Desktop\ClubedaLeiturateste\ConsoleApp\obj\Debug\net10.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\yuajs\Desktop\ClubedaLeiturateste\ConsoleApp\obj\Debug\net10.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\yuajs\Desktop\ClubedaLeiturateste\ConsoleApp\obj\Debug\net10.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\yuajs\Desktop\ClubedaLeiturateste\ConsoleApp\obj\Debug\net10.0\ConsoleApp.sourcelink.json

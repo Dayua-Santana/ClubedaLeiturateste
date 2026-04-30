@@ -31,10 +31,14 @@ public class TelaRevista
             Console.Write("\nOpção: ");
             opcao = Console.ReadLine().ToUpper();
 
-            if (opcao == "1") InserirNovaRevista();
-            else if (opcao == "2") VisualizarRevistas(true);
-            else if (opcao == "3") EditarRevista();
-            else if (opcao == "4") ExcluirRevista();
+            if (opcao == "1")
+                InserirNovaRevista();
+            else if (opcao == "2")
+                VisualizarRevistas(true);
+            else if (opcao == "3")
+                EditarRevista();
+            else if (opcao == "4")
+                ExcluirRevista();
         }
     }
 
@@ -44,7 +48,7 @@ public class TelaRevista
         Console.WriteLine("Cadastrando nova revista...");
 
         Console.Write("Título: ");
-        string titulo = Console.ReadLine();
+        string titulo = Console.ReadLine()!;
 
         Console.Write("Número da Edição: ");
         int edicao = Convert.ToInt32(Console.ReadLine());
@@ -55,7 +59,7 @@ public class TelaRevista
         //Precisamos selecionar uma caixa para revista
         telaCaixa.VisualizarCaixas(false);
         Console.Write("\nDigite o ID da caixa onde esta revista ficará guardada: ");
-        int idCaixa = Convert.ToInt32(Console.ReadLine());
+        string idCaixa = Console.ReadLine() ?? "";
 
         Caixa caixaSelecionada = (Caixa)repositorioCaixa.SelecionarPorId(idCaixa);
 
@@ -84,7 +88,7 @@ public class TelaRevista
         Console.Clear();
         Console.WriteLine("Listando Revistas....");
         Console.WriteLine("---------------------------------------------------------------------------------------");
-        Console.WriteLine("{0,-5} | {1,-20} | {2,-10} | {3,-10} | {4,-15}", "ID", "Título", "Edição", "Status", "Caixa (Cor)");
+        Console.WriteLine("{0,-10} | {1,-20} | {2,-10} | {3,-10} | {4,-15}", "ID", "Título", "Edição", "Status", "Caixa (Cor)");
         Console.WriteLine("---------------------------------------------------------------------------------------");
 
         EntidadeBase[] registros = repositorioRevista.SelecionarTodos();
@@ -114,7 +118,7 @@ public class TelaRevista
     {
         VisualizarRevistas(false);
         Console.Write("\nDigite o ID da revista que deseja editar: ");
-        int id = Convert.ToInt32(Console.ReadLine());
+        string id = Console.ReadLine() ?? "";
 
         Console.Write("Novo Título: ");
         string titulo = Console.ReadLine();
@@ -125,7 +129,8 @@ public class TelaRevista
 
         telaCaixa.VisualizarCaixas(false);
         Console.Write("\nDigite o ID da nova Caixa: ");
-        int idCaixa = Convert.ToInt32(Console.ReadLine());
+        string idCaixa = Console.ReadLine() ?? "";
+
         Caixa caixa = (Caixa)repositorioCaixa.SelecionarPorId(idCaixa);
 
         Revista revistaAtualizada = new Revista(titulo, edicao, ano, caixa);
@@ -145,7 +150,7 @@ public class TelaRevista
     {
         VisualizarRevistas(false);
         Console.Write("\nDigite o ID da revista que deseja excluir: ");
-        int id = Convert.ToInt32(Console.ReadLine());
+        string id = Console.ReadLine() ?? "";
 
         bool conseguiu = repositorioRevista.Excluir(id);
 

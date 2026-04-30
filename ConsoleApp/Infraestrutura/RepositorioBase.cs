@@ -4,12 +4,11 @@ namespace ClubedaLeiturateste.ConsoleApp.Infraestrutura
 
     public abstract class RepositorioBase
     {
-        protected EntidadeBase?[] registros = new EntidadeBase[100];
+        protected EntidadeBase?[] registros = new EntidadeBase?[100];
         protected int contadorId = 1; // Para gerar IDs automáticos
 
         public void Cadastrar(EntidadeBase entidade)
         {
-            entidade.Id = contadorId++;
 
             for (int i = 0; i < registros.Length; i++)
             {
@@ -20,7 +19,7 @@ namespace ClubedaLeiturateste.ConsoleApp.Infraestrutura
                 }
             }
         }
-        public virtual bool Editar(int IdParaEditar, EntidadeBase novaEntidade)
+        public virtual bool Editar(string IdParaEditar, EntidadeBase novaEntidade)
         {
             EntidadeBase? registro = SelecionarPorId(IdParaEditar);
             if (registro == null)
@@ -29,7 +28,7 @@ namespace ClubedaLeiturateste.ConsoleApp.Infraestrutura
             registro.AtualizarRegistro(novaEntidade);
             return true;
         }
-        public bool Excluir(int IdParaExcluir)
+        public bool Excluir(string IdParaExcluir)
         {
             for (int i = 0; i < registros.Length; i++)
             {
@@ -42,7 +41,7 @@ namespace ClubedaLeiturateste.ConsoleApp.Infraestrutura
             return false;
 
         }
-        public EntidadeBase? SelecionarPorId(int id)
+        public EntidadeBase? SelecionarPorId(string id)
         {
             foreach (EntidadeBase? e in registros)
             {
@@ -55,6 +54,5 @@ namespace ClubedaLeiturateste.ConsoleApp.Infraestrutura
         {
             return registros;
         }
-
     }
 }
