@@ -1,3 +1,25 @@
-bin/
-obj/
-.gif
+# Dependências
+node_modules/
+jspm_packages/
+venv/
+.env
+.env.local
+
+# Builds e logs
+dist/
+build/
+*.log
+npm-debug.log*
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
