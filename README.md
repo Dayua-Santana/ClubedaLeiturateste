@@ -7,9 +7,6 @@
 Sistema de console em C# para gerenciar um clube de leitura de revistas, controlando caixas de armazenamento, amigos do clube e empréstimos.
 
 
-![alt text](ConsoleApp_GNBmA4KGO9.gif)
-
-
 ## 🎯 Funcionalidades
 
 - **Gerenciar Caixas**: cadastrar, visualizar, editar e excluir caixas onde as revistas são organizadas (por cor, etiqueta e dias de empréstimo permitidos).
