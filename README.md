@@ -1,58 +1,43 @@
-
-
-
-```markdown
 # 📚 Clube da Leitura
 
-Sistema de console em C# para gerenciar um clube de leitura de revistas, controlando caixas de armazenamento, amigos do clube e empréstimos.
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET 10](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
+Sistema de console desenvolvido para organizar um clube de leitura, permitindo o controle total sobre o armazenamento de revistas, cadastro de membros e gestão de empréstimos com datas de devolução automatizadas.
 
-## 🎯 Funcionalidades
+![alt text](ConsoleApp_GNBmA4KGO9-2.gif)
 
-- **Gerenciar Caixas**: cadastrar, visualizar, editar e excluir caixas onde as revistas são organizadas (por cor, etiqueta e dias de empréstimo permitidos).
-- **Gerenciar Amigos**: cadastrar, visualizar, editar e excluir os amigos do clube com nome, responsável e telefone.
-- **Gerenciar Revistas**: cadastrar, visualizar, editar e excluir revistas vinculadas a uma caixa, com título, edição e ano de publicação.
-- **Gerenciar Empréstimos**: registrar empréstimos de revistas para amigos, com cálculo automático da data de devolução prevista a partir dos dias da caixa.
+---
 
-## 🛠️ Tecnologias
+## 🎯 Funcionalidades Principal
 
-- **Linguagem:** C#
-- **Framework:** .NET 10
-- **Tipo:** Aplicação de Console
+O sistema oferece operações completas (CRUD) para manter a organização do clube:
 
-## 📁 Estrutura do Projeto
+* **📦 Gestão de Caixas**: Organização física por cor e etiqueta, com definição de prazo de empréstimo customizado por caixa.
+* **👥 Gestão de Amigos**: Cadastro de membros com informações de contato e responsável (ideal para clubes infantis/juvenis).
+* **📖 Controle de Acervo**: Registro de revistas vinculadas a caixas específicas para facilitar a localização.
+* **🤝 Sistema de Empréstimos**: Registro de histórico com cálculo automático de devolução e status de disponibilidade da revista.
 
-```
-ConsoleApp/
-├── Dominio/             # Entidades do domínio (Caixa, Revista, Amigo, Emprestimo)
-├── Apresentacao/        # Telas de interação com o usuário
-├── Infraestrutura/      # Repositórios para persistência em memória
-└── Program.cs           # Ponto de entrada da aplicação
-```
+---
 
-A aplicação segue uma separação em camadas:
-- **Domínio:** regras de negócio e entidades.
-- **Apresentação:** menus e interação no console.
-- **Infraestrutura:** armazenamento dos registros em memória.
+## 🛠️ Tecnologias e Arquitetura
 
-## ▶️ Como Executar
+| Recurso | Tecnologia |
+| :--- | :--- |
+| **Linguagem** | C# |
+| **Ambiente** | .NET 10 |
+| **Paradigma** | Orientação a Objetos (POO) |
+| **Arquitetura** | Camadas (Domain, Presentation, Infrastructure) |
 
-Pré-requisitos: [.NET SDK 10.0](https://dotnet.microsoft.com/download) instalado.
+---
+
+## 📁 Organização do Código
+
+A estrutura do projeto foi pensada seguindo o princípio da responsabilidade única:
 
 ```bash
-# Clonar o repositório
-git clone https://github.com/Dayua-Santana/ClubedaLeiturateste.git
-
-# Entrar na pasta do projeto
-cd ClubedaLeiturateste/ConsoleApp
-
-# Executar
-dotnet run
-```
-
-## 📋 Fluxo de Uso
-
-1. Cadastre uma ou mais **Caixas** (definindo cor, etiqueta e dias de empréstimo).
-2. Cadastre os **Amigos** do clube.
-3. Cadastre as **Revistas**, vinculando cada uma a uma caixa.
-4. Registre **Empréstimos** selecionando o amigo e a revista desejada.
+ConsoleApp/
+ ┣ 📂 Dominio          # Entidades principais e lógica de negócio
+ ┣ 📂 Apresentacao     # Interface de usuário (menus e inputs)
+ ┣ 📂 Infraestrutura    # Repositórios para armazenamento em memória
+ ┗ 📜 Program.cs       # Ponto de entrada (Bootstrap) da aplicação
