@@ -42,6 +42,8 @@ ConsoleApp/
  ┣ 📂 Infraestrutura    # Repositórios para armazenamento em memória
  ┗ 📜 Program.cs       # Ponto de entrada (Bootstrap) da aplicação
 ```
+---
+
 ## 📖 Como Executar
 1. Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado.
 2. Clone o repositório:
