@@ -1,6 +1,6 @@
 using ClubedaLeiturateste.ConsoleApp.Dominio;
 using System;
-
+using System.Collections.Generic;
 
 namespace ClubedaLeiturateste.ConsoleApp.Dominio;
 
@@ -24,6 +24,14 @@ public class Emprestimo : EntidadeBase
     //Calculando: Pega a data de abertura e soma os dias da caixa da revista
     public DateTime DataDevolucaoPrevista => DataEmprestimo.AddDays(Revista.Caixa.DiasDeEmprestimo);
     public bool EstaAtrasado => Status == StatusEmprestimo.Aberto && DateTime.Now > DataDevolucaoPrevista;
+
+    public bool EstaAberto => Status == StatusEmprestimo.Aberto;
+
+    public void RegistrarDevolucao()
+    {
+        DataDevolucao = DateTime.Now;
+        Status = StatusEmprestimo.Concluido;
+    }
 
     public override string[] Validar()
     {

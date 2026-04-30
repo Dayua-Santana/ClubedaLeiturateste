@@ -13,7 +13,7 @@ public class TelaRevista
     {
         this.repositorioRevista = repoRevista;
         this.repositorioCaixa = repoCaixa;
-        this.telaCaixa = telaCaixa
+        this.telaCaixa = telaCaixa;
     }
 
     public void Menu()
@@ -77,7 +77,7 @@ public class TelaRevista
             return;
         }
 
-        RepositorioRevista.Cadastrar(novaRevista);
+        repositorioRevista.Cadastrar(novaRevista);
 
         Console.WriteLine("\nRevista cadastrada com sucesso!");
         Console.ReadLine();
@@ -118,7 +118,7 @@ public class TelaRevista
     {
         VisualizarRevistas(false);
         Console.Write("\nDigite o ID da revista que deseja editar: ");
-        string id = Console.ReadLine() ?? "";
+        string id = Console.ReadLine()!;
 
         Console.Write("Novo Título: ");
         string titulo = Console.ReadLine();
@@ -150,7 +150,7 @@ public class TelaRevista
     {
         VisualizarRevistas(false);
         Console.Write("\nDigite o ID da revista que deseja excluir: ");
-        string id = Console.ReadLine() ?? "";
+        string id = Console.ReadLine()!;
 
         bool conseguiu = repositorioRevista.Excluir(id);
 

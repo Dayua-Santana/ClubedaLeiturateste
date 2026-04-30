@@ -45,10 +45,6 @@ public class Amigo : EntidadeBase
         return erros.ToArray();
     }
 
-    public void CadastrarEmprestimo(Emprestimo novoEmprestimo)
-    {
-        repositorioEmprestimo
-    }
     public override void AtualizarRegistro(EntidadeBase novoRegistro)
     {
         Amigo atualizado = (Amigo)novoRegistro;

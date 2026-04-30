@@ -1,4 +1,4 @@
 public enum StatusEmprestimo
 {
-    Aberto, Fechado
+    Aberto, Concluido
 }

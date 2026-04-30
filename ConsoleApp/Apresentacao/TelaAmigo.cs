@@ -106,7 +106,7 @@ public class TelaAmigo
     {
         VisualizarAmigos(false);
         Console.Write("\nDigite o ID do amigo que deseja editar: ");
-        int id = Convert.ToInt32(Console.ReadLine());
+        string id = Console.ReadLine()!;
         Console.Write("Novo nome: ");
         string nome = Console.ReadLine();
         Console.Write("Novo Responsável: ");
@@ -129,7 +129,7 @@ public class TelaAmigo
     {
         VisualizarAmigos(false);
         Console.Write("\nDigite o ID do amigo que deseja excluir: ");
-        int id = Convert.ToInt32(Console.ReadLine());
+        string id = Console.ReadLine()!;
 
         bool conseguiuExcluir = repositorioAmigo.Excluir(id);
 
