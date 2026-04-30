@@ -30,6 +30,11 @@ public class Caixa : EntidadeBase
         if (DiasDeEmprestimo < 1)
             erros += "Dias de empréstimo deve ser maior que 0;";
 
+        if (string.IsNullOrWhiteSpace(Cor))
+        {
+            erros += "A cor da caixa é obrigatória;";
+        }
+
         //Split separa os erros pelo ";" e joga fora os vazios
         return erros.Split(';', StringSplitOptions.RemoveEmptyEntries);
     }
@@ -43,4 +48,5 @@ public class Caixa : EntidadeBase
         this.Cor = nova.Cor;
         this.DiasDeEmprestimo = nova.DiasDeEmprestimo;
     }
+
 }
